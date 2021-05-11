@@ -1,0 +1,28 @@
+$primary-color: #fff;
+$secondary-color: #080c18;
+$default-font-size: 16px;
+$background-dark: #030923;
+$background-light: #4a4e7e;
+
+html, body, img, div, section, header, article {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'Open Sans';
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+.font-family-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-light {
+    color: $primary-color;
+}
+
+.text-dark {
+    color: $secondary-color;
+}

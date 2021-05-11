@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    animation-duration: 5s;
+    animation-name: a-hover;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes a-hover {
+    from {
+        color: red;
+    }
+
+    50% {
+        color: yellow;
+        font-size: 150%;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.navicon {
+    width: 30px;
+}
