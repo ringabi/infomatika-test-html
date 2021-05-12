@@ -1,4 +1,10 @@
-html, body, img, div, section, header, article {
+html,
+body,
+img,
+div,
+section,
+header,
+article {
   margin: 0;
   padding: 0;
 }
@@ -107,10 +113,10 @@ a {
 }
 
 a:hover {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
   -webkit-animation-name: a-hover;
           animation-name: a-hover;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
@@ -162,51 +168,51 @@ a:hover {
 }
 
 .bg {
-  background: #030923;
   position: relative;
   z-index: 1;
   height: 100vh;
+  background: #030923;
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 16px;
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 
 .circle-big {
+  position: absolute;
+  top: -7.5%;
+  left: 20.8%;
+  z-index: -22;
   width: 115vh;
   height: 115vh;
-  position: absolute;
-  left: 20.8%;
-  top: -7.5%;
-  z-index: -22;
-  border-radius: 50%;
-  border: 1px solid #fff;
   background: content-box radial-gradient(#4a4e7e, #030923);
+  border: 1px solid #fff;
+  border-radius: 50%;
   -webkit-box-shadow: 0 0 20px 20px #181c39;
           box-shadow: 0 0 20px 20px #181c39;
 }
 
 .circle-small {
-  width: 75vh;
-  height: 75vh;
   position: absolute;
   z-index: -20;
-  border-radius: 50%;
-  border: 1px solid #fff;
+  width: 75vh;
+  height: 75vh;
   background: content-box radial-gradient(#4a4e7e, #2c3057);
+  border: 1px solid #fff;
+  border-radius: 50%;
   -webkit-box-shadow: 0 0 15px 15px #2c3057;
           box-shadow: 0 0 15px 15px #2c3057;
 }
 
 button {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   background-color: #fff;
-  border-radius: 5px;
   border: 1px solid #080c18;
+  border-radius: 5px;
 }
 
 .h-100 {
@@ -217,82 +223,82 @@ button {
   display: -ms-grid;
   display: grid;
       grid-template-areas: '. . . . . hex-next-to-next . .' '. . . . hex-next . . .' 'rival-1 rival-1 rival-1 hex-now hex-now rival-2 rival-2 rival-2' '. . . hex-preceding . . . .' '. . hex-preceding-before-preceding . . . . .';
-  -ms-grid-columns: 8rem (1fr)[6] 8rem;
-      grid-template-columns: 8rem repeat(6, 1fr) 8rem;
   -ms-grid-rows: 6rem 9rem 15rem 9rem 6rem;
       grid-template-rows: 6rem 9rem 15rem 9rem 6rem;
+  -ms-grid-columns: 8rem (1fr)[6] 8rem;
+      grid-template-columns: 8rem repeat(6, 1fr) 8rem;
   gap: 20px;
 }
 
 .header {
   grid-area: header;
-  grid-column: 1/-1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  grid-column: 1/-1;
 }
 
 .grid-hex-next-to-next {
+  position: relative;
+  top: 0;
+  right: -53px;
   -ms-grid-row: 1;
   -ms-grid-column: 6;
   grid-area: hex-next-to-next;
   width: 113px;
   height: 132px;
   margin: auto;
-  position: relative;
-  right: -53px;
-  top: 0px;
   cursor: pointer;
 }
 
 .grid-hex-next {
+  position: relative;
+  right: -118px;
+  bottom: 60px;
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   grid-area: hex-next;
   width: 157px;
   height: 184px;
   margin: auto;
-  position: relative;
-  bottom: 60px;
-  right: -118px;
   cursor: pointer;
 }
 
 .grid-hex-preceding {
+  position: relative;
+  bottom: 230px;
+  left: -148px;
   -ms-grid-row: 4;
   -ms-grid-column: 4;
   grid-area: hex-preceding;
   width: 157px;
   height: 184px;
   margin: auto;
-  position: relative;
-  bottom: 230px;
-  left: -148px;
   cursor: pointer;
 }
 
 .grid-hex-preceding-before-preceding {
+  position: relative;
+  bottom: 292px;
+  left: -83px;
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: hex-preceding-before-preceding;
   width: 113px;
   height: 132px;
   margin: auto;
-  position: relative;
-  bottom: 292px;
-  left: -83px;
   cursor: pointer;
 }
 
 .grid-hex-now {
+  position: relative;
+  bottom: 160px;
+  left: -2px;
   -ms-grid-row: 3;
   -ms-grid-column: 4;
   -ms-grid-column-span: 2;
   grid-area: hex-now;
   margin: auto;
-  position: relative;
-  bottom: 160px;
-  left: -2px;
   cursor: pointer;
 }
 
@@ -305,11 +311,11 @@ button {
 }
 
 .rival {
-  -webkit-perspective: 400px;
-          perspective: 400px;
   display: inline-block;
   width: 120%;
   height: 128px;
+  -webkit-perspective: 400px;
+          perspective: 400px;
 }
 
 .rival-left {
@@ -329,37 +335,37 @@ button {
   margin-left: -101px;
 }
 
-.rival:before {
+.rival::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
   -webkit-transform: skew(-30deg);
           transform: skew(-30deg);
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-  height: 100%;
-  width: 100%;
-  position: absolute;
   content: '';
-  background-color: #fff;
 }
 
-.rival-left:before {
+.rival-left::before {
   border-radius: 0 10px 10px 0;
 }
 
-.rival-right:before {
+.rival-right::before {
   border-radius: 10px 0 0 10px;
 }
 
 .rival-right__text {
-  padding: 36px 0 48px 100px;
-  color: #080c18;
   position: relative;
   z-index: 1;
+  padding: 36px 0 48px 100px;
+  color: #080c18;
 }
 
 .rival-left__text {
-  padding: 36px 18px 48px 0;
-  text-align: right;
-  color: #080c18;
   position: relative;
   z-index: 1;
+  padding: 36px 18px 48px 0;
+  color: #080c18;
+  text-align: right;
 }
